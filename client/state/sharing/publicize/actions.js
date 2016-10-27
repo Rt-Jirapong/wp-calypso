@@ -138,6 +138,13 @@ export function deleteSiteConnection( connection ) {
 			} );
 }
 
+export function failCreateConnection( error ) {
+	return {
+		type: PUBLICIZE_CONNECTION_CREATE_FAILURE,
+		error,
+	};
+}
+
 /**
  * Returns an action object to be used in signalling that creating a Publicize
  * connection has failed.
