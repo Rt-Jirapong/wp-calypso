@@ -207,8 +207,7 @@ const GoogleAppsDialog = React.createClass( {
 	validateForm() {
 		const validation = validateGappsUsers( {
 			users: this.state.users,
-			fields: this.getFields(),
-			domainSuffix: this.props.domain
+			fields: this.getFields()
 		} );
 
 		if ( validation.errors.length > 0 ) {

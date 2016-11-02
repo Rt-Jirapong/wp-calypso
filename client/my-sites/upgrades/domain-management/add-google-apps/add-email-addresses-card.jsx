@@ -170,7 +170,7 @@ const AddEmailAddressesCard = React.createClass( {
 		let command = { fieldsets: {} };
 
 		command.fieldsets[ index ] = {};
-		command.fieldsets[ index ][ fieldName ] = { value: { $set: newValue } };
+		command.fieldsets[ index ][ fieldName ] = { value: { $set: newValue.trim().toLowerCase() } };
 
 		if ( fieldName === 'domain' ) {
 			this.recordEvent( 'domainChange', newValue, index );
